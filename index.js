@@ -28,7 +28,7 @@ function playAgain() {
     } else if (wantToPlayAgain.toUpperCase() === "N") {
         console.log("Thank for playing ! Bye Bye !")
     } else {
-        console.log('Invalid choice, please enter Y or N')
+        console.log('🛑 Invalid choice, please enter Y or N')
         playAgain()
     }
 }
@@ -38,11 +38,11 @@ function playGuessNumber(targetNumber) {
    const guessNumber = Number(prompt("Enter a number : "))
 
    if(isNaN(guessNumber)) {
-        console.log('Error, you must enter a number !')
+        console.log('🛑 Error, you must enter a number !')
         return playGuessNumber(targetNumber)
    }
     if(guessNumber < 0 || guessNumber > 100) {
-        console.log('Error, the number must me between 0 & 100')
+        console.log('🛑 Error, the number must me between 0 & 100')
     } 
     
      else if(guessNumber > targetNumber) {
