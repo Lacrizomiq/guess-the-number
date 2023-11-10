@@ -18,6 +18,17 @@ console.log(`
 
 const targetNumber = Math.floor(Math.random()*100)
 let numberOfTry = 0
+
+function playAgain() {
+    const wantToPlayAgain = prompt("Do you want to play again ? (Y/N) ")
+    if(wantToPlayAgain.toUpperCase() === "Y") {
+        const newTargetNumber = Math.floor(Math.random()* 101)
+        numberOfTry = 0
+        playGuessNumber(newTargetNumber)
+    } else {
+        console.log("Thank for playing ! Bye Bye !")
+    }
+}
  
 
 function playGuessNumber(targetNumber) {
@@ -39,6 +50,7 @@ function playGuessNumber(targetNumber) {
     } else {
         console.log('🟢 GG 🟢')
         console.log(`✨ You have succeed aftet ${numberOfTry} try ! ✨`)
+        playAgain()
         process.exit(1)
     }
 }
